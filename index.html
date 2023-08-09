@@ -31,6 +31,17 @@
                 </div>
             </div>
         </header>
+        <div class="socialicons unactive" id="socialicons">
+            <div>
+                <img src="whatsapp_logo.png" width="30px" height="30px" alt="Whatsapp logo">
+            </div>
+            <div>
+                <img src="facebook_logo.png" width="30px" height="30px" alt="Facebook logo">
+            </div>
+            <div>
+                <img src="twitter_logo.png" width="30px" height="30px" alt="Twitter logo">
+            </div>
+        </div>
         <main>
             <div class="section1">
                 <div class="section1content">
@@ -124,5 +135,21 @@
             </div>
         </main>
     </div>
+    <script>
+        var socialicons = document.getElementById("socialicons");
+        window.onscroll = function () {
+            myFunction();
+        };
+
+        function myFunction() {
+            if (document.documentElement.scrollTop >=75) {
+                socialicons.style.position="fixed";
+                socialicons.style.top="75px"
+            } else {
+                socialicons.style.position="absolute";
+                socialicons.style.top=(225-document.documentElement.scrollTop)+"PX";
+            }
+        }
+    </script>
 </body>
 </html>
